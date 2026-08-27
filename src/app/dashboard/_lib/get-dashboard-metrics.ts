@@ -1,7 +1,7 @@
 import type { Metric } from "../_types/dashboard.types"
 
 export async function getDashboardMetrics(): Promise<Metric[]> {
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  // await new Promise(resolve => setTimeout(resolve, 1000))
 
   return [
     { id: "revenue", label: "Revenue", value: 48200, change: 4.3 },

@@ -4,3 +4,10 @@ export type Metric = {
   value: number
   change: number
 }
+
+export type ActivityItem = {
+  id: string
+  actor: string
+  action: string
+  timestamp: string
+}
