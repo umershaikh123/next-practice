@@ -8,7 +8,7 @@ import {
 import "./globals.css"
 import { cn } from "@/shared/lib/utils"
 import { NavBar } from "@/shared/components/nav-bar"
-
+import { Providers } from "@/shared/providers"
 const playfairDisplayHeading = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
@@ -50,7 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <NavBar />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
