@@ -17,7 +17,7 @@ export function HeroSection() {
         A playground for exploring the App Router, layouts, and everything else
         that ships with modern Next.js.
       </p>
-      <Button render={<Link href="/dashboard" />} size="lg">
+      <Button render={<Link href="/dashboard" />} nativeButton={false} size="lg">
         View dashboard
       </Button>
     </section>

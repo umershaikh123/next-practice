@@ -8,7 +8,9 @@ export default function NotFound() {
       <p className="text-sm text-muted-foreground">
         The page you&apos;re looking for doesn&apos;t exist.
       </p>
-      <Button render={<Link href="/" />}>Go home</Button>
+      <Button render={<Link href="/" />} nativeButton={false}>
+        Go home
+      </Button>
     </div>
   )
 }
