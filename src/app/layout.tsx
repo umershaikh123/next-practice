@@ -9,6 +9,7 @@ import "./globals.css"
 import { cn } from "@/shared/lib/utils"
 import { NavBar } from "@/shared/components/nav-bar"
 import { Providers } from "@/shared/providers"
+import { LayoutFrame } from "@/shared/components/layout-frame"
 const playfairDisplayHeading = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
@@ -50,7 +51,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <NavBar />
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="mx-auto w-full max-w-5xl flex-1 p-8">
+            <LayoutFrame label="Root Layout" path="app/layout.tsx" color={1}>
+              {children}
+            </LayoutFrame>
+          </div>
+        </Providers>
       </body>
     </html>
   )
